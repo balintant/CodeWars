@@ -1,0 +1,7 @@
+[lib]
+path = "lib.rs"
+
+[package]
+name              = "number-of-integer-partitions"
+documentation     = "https://www.codewars.com/kata/546d5028ddbcbd4b8d001254"
+version.workspace = true

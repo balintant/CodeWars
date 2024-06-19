@@ -1,0 +1,8 @@
+[workspace]
+members = ["4-kyu_*"]
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.package]
+version = "0.1.0"
