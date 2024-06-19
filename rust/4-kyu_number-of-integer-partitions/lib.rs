@@ -1,9 +1,16 @@
-mod partitions;
-use crate::partitions::Partitions;
-
 pub fn partitions(n: u32) -> u32 {
-    n.partitions().count() as u32
+    let mut partitions = vec![0; n as usize + 1];
+    partitions[0] = 1;
+
+    for i in 1..=n as usize {
+        for j in i..=n as usize {
+            partitions[j] += partitions[j - i];
+        }
+    }
+
+    partitions[n as usize]
 }
+
 #[cfg(test)]
 mod tests {
     use super::partitions;
